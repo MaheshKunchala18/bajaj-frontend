@@ -30,12 +30,13 @@ const App = () => {
         return;
       }
 
-    const result = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/bfhl`, parsedData, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+      const result = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/bfhl`, parsedData, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
 
+      console.log(result.data);
       setResponse(result.data);
     } catch (err) {
       console.error('Error:', err);
