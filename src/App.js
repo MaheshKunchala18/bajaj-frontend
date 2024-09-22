@@ -46,6 +46,7 @@ const App = () => {
 
   const handleFilterChange = (selected) => {
     setSelectedFilters(selected);
+    console.log(selectedFilters);
 
     if (!response) return;
 
